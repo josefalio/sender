@@ -143,30 +143,10 @@ def transfer_eth(privatekey, amount_to_transfer, to_address, chain_id, scan, rpc
         except:
             table.append([f'{symbol}', address, to_address, '\u001b[31merror\u001b[0m'])
 
-RPC = [
-    {'chain': 'Ethereum', 'chain_id': 1, 'rpc': 'https://rpc.ankr.com/eth', 'scan': 'https://etherscan.io/tx', 'token': 'ETH'},
-
-    {'chain': 'Optimism', 'chain_id': 10, 'rpc': 'https://rpc.ankr.com/optimism', 'scan': 'https://optimistic.etherscan.io/tx', 'token': 'ETH'},
-
-    {'chain': 'BSC', 'chain_id': 56, 'rpc': 'https://bsc-dataseed.binance.org', 'scan': 'https://bscscan.com/tx', 'token': 'BNB'},
-
-    {'chain': 'Polygon', 'chain_id': 137, 'rpc': 'https://polygon-rpc.com', 'scan': 'https://polygonscan.com/tx', 'token': 'MATIC'},
-
-    {'chain': 'Arbitrum One', 'chain_id': 42161, 'rpc': 'https://arb1.arbitrum.io/rpc', 'scan': 'https://arbiscan.io/tx', 'token': 'ETH'},
-
-    {'chain': 'AVAX', 'chain_id': 43114, 'rpc': 'https://api.avax.network/ext/bc/C/rpc', 'scan': 'https://snowtrace.io/tx', 'token': 'AVAX'},
-
-    {'chain': 'Arbitrum Nova', 'chain_id': 42170, 'rpc': 'https://nova.arbitrum.io/rpc', 'scan': 'https://nova-explorer.arbitrum.io/tx', 'token': 'ETH'},
-
-    {'chain': 'Fantom', 'chain_id': 250, 'rpc': 'https://rpc.ankr.com/fantom', 'scan': 'https://ftmscan.com/tx', 'token': 'FTM'},
-]
+RPC = [] #............
 
 if __name__ == "__main__":
 
-    cprint(f'\n============================================= hodlmod.eth =============================================', 'cyan')
-
-    cprint(f'\nsubscribe to us : https://t.me/hodlmodeth', 'magenta')
-    
     with open("private_keys.txt", "r") as f:
         keys_list = [row.strip() for row in f]
 
